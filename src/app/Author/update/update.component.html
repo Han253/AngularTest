@@ -1,0 +1,15 @@
+<H2>Update Author</H2>
+
+
+<div>
+    <form class="form" [formGroup]="authorForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name">
+        <br><br>
+        <label for="country">Country:</label>
+        <input type="text" id="country" formControlName="country">
+        <br><br>
+        <button type="submit" class="btn btn-success" [disabled]="!authorForm.valid" (click)="update()">Update</button>&nbsp;
+        <a class="btn btn-danger" routerLink="">Cancel</a>
+    </form>
+</div>

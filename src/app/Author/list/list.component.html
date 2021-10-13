@@ -1,0 +1,23 @@
+<p>Página Principal</p>
+
+<div class="container">
+    <a routerLink="/new">Agregar</a>
+
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Acciónes</th>
+        </tr>
+        <tr *ngFor="let author of authors" scope="row">
+            <td>{{ author.name}}</td>
+            <td>
+                <a  (click)="authorDetail(author.id)" class="btn btn-sm btn-success">Details</a>&nbsp;&nbsp;
+                <a  (click)="updateAuthor(author.id)">Update</a>&nbsp;&nbsp;
+                <a (click)="deleteAuthor(author.id)">Delete</a>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+
